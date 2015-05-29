@@ -19,10 +19,10 @@ namespace Glasses.Web
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-           name: "Hello",
-           url: "{controller}/{action}/{name}/{dptr}"
-       );
+           // routes.MapRoute(
+           //name: "Hello",
+           //url: "{controller}/{action}/{name}/{dptr}"
+       //);
 
         }
     }

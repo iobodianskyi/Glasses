@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Glasses.Web.Models.Glasses>
+@{
+    ViewBag.Title = "GlassesList";
+}
+
+<h2>Список доступних окулярів</h2>
+@foreach (var glass in Model)
+{
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="panel-title">@glass.Name<a class="anchorjs-link" href="#panel-title"><span class="anchorjs-icon"></span></a></h3>
+        </div>
+        <div class="panel-body">
+            <div>
+                <label>Dioptries</label>
+                <span>@glass.Dioptries</span>
+            </div>
+            <div>
+                <label>Description</label>
+                <div>@glass.Description</div>
+            </div>
+        </div>
+    </div>
+}
+

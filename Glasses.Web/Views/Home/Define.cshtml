@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Define";
+    var size = ViewBag.TextSize == null ? 200 : (int)ViewBag.TextSize - 50;
+}
+
+    <h2 class="text-center">Визначення зору</h2>
+    <div class="glasses-@ViewBag.TextSize">АБВГД</div>
+    @Html.ActionLink("Бачу чітко", "Define", new { size = size }, new { @class = "btn btn-default" })
+
+    @Html.ActionLink("Бачу погано", "GlassesList", null, new { @class = "btn btn-default" })
+
+
