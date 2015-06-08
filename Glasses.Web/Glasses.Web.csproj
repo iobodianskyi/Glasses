@@ -175,6 +175,20 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Define\1.jpg" />
+    <Content Include="Content\Images\Define\2.jpg" />
+    <Content Include="Content\Images\Define\3.jpg" />
+    <Content Include="Content\Images\Define\4.jpg" />
+    <Content Include="Content\Images\Define\5.jpg" />
+    <Content Include="Content\Images\Define\6.jpg" />
+    <Content Include="Content\Images\Define\7.jpg" />
+    <Content Include="Content\Images\Define\8.jpg" />
+    <Content Include="Content\Images\Glasses\111.jpg" />
+    <Content Include="Content\Images\Glasses\112.jpg" />
+    <Content Include="Content\Images\Glasses\122.jpg" />
+    <Content Include="Content\Images\Glasses\132.jpg" />
+    <Content Include="Content\Images\Glasses\222.jpg" />
+    <Content Include="Content\Images\Glasses\232.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -231,6 +245,8 @@
     <Content Include="Views\HelloWorld\Index.cshtml" />
     <Content Include="Views\Home\Define.cshtml" />
     <Content Include="Views\Home\GlassesList.cshtml" />
+    <Content Include="Views\Home\Instractions.cshtml" />
+    <Content Include="Views\Home\GoodEyes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

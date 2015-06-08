@@ -23,19 +23,58 @@ textarea {
     max-width: 280px;
 }
 
-
-.glasses-200 {
-    font-size: 200px;
+hr.bottom {
+    margin-bottom: 40px;
 }
 
-.glasses-150 {
-    font-size: 150px;
+hr.top {
+    margin-top: 40px;
 }
 
-.glasses-100 {
-    font-size: 100px;
+.glasses-image {
+    width: 225px;
 }
 
-.glasses-50 {
-    font-size: 50px;
+.define-image {
+    width: 115px;
+}
+
+.glasses-8 {
+    background: url("Images/Define/8.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-7 {
+    background: url("Images/Define/7.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-6 {
+    background: url("Images/Define/6.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-5 {
+    background: url("Images/Define/5.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-4 {
+    background: url("Images/Define/4.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-3 {
+    background: url("Images/Define/3.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-2 {
+    background: url("Images/Define/2.jpg") top left no-repeat;
+    width: 300px;
+}
+
+.glasses-1 {
+    background: url("Images/Define/1.jpg") top left no-repeat;
+    width: 300px;
 }

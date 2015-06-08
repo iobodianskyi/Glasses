@@ -1,13 +1,42 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Define";
-    var size = ViewBag.TextSize == null ? 200 : (int)ViewBag.TextSize - 50;
+    var newSize = int.Parse(ViewBag.Size.ToString()) + 1;
+    var imageUrl = string.Format(@"\Content\Images\Define\{0}.jpg", ViewBag.Size.ToString());
 }
+ 
+<h2 class="text-center">Визначення зору</h2>
+<hr class="bottom">
+<div class="text-center">
+    <img src="@imageUrl" class="define-image"/>
+</div>
+<hr class="top">
+<div class="text-center">
+    @Html.ActionLink("Бачу чітко", "Define", new { size = newSize }, new { @class = "btn btn-default" })
+    @Html.ActionLink("Бачу погано", "", null, new { id = "show-dialog-button", @class = "btn btn-default" })
+</div>
+<div id="recomendationModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Рекомендації</p>
+                <div>text</div>
+                <div>dioptr: @ViewBag.Size</div>
+            </div>
+            <div class="modal-footer">
+                @Html.ActionLink("Обрати окуляри", "GlassesList", null, new { id = "show-dialog-button", @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+</div>
 
-    <h2 class="text-center">Визначення зору</h2>
-    <div class="glasses-@ViewBag.TextSize">АБВГД</div>
-    @Html.ActionLink("Бачу чітко", "Define", new { size = size }, new { @class = "btn btn-default" })
-
-    @Html.ActionLink("Бачу погано", "GlassesList", null, new { @class = "btn btn-default" })
-
-
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#show-dialog-button').click(function (event) {
+                $('#recomendationModal').modal('show');
+                event.preventDefault()
+            });
+            }
+        );
+    </script>
+}
