@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using Glasses.Web.Models;
 
 namespace Glasses.Web.Controllers
 {
@@ -26,11 +22,12 @@ namespace Glasses.Web.Controllers
             return View();
         }
 
-        public ActionResult Define(int size = 1)
+        public ActionResult Define(int size = 1, double dioptr = 4)
         {
             if (size >= 9) return RedirectToAction("GoodEyes");
 
-            ViewBag.Size = size;
+				ViewBag.Size = size;
+				ViewBag.Dioptr = dioptr;
             return View();
         }
 
@@ -97,5 +94,9 @@ namespace Glasses.Web.Controllers
 
             return View();
         }
+
+		  public ActionResult BadSight() {
+			  return View();
+		  }
     }
 }

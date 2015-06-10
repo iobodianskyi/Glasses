@@ -1,7 +1,8 @@
 ﻿@{
-    ViewBag.Title = "Define";
-    var newSize = int.Parse(ViewBag.Size.ToString()) + 1;
-    var imageUrl = string.Format(@"\Content\Images\Define\{0}.jpg", ViewBag.Size.ToString());
+	ViewBag.Title = "Define";
+	var newSize = int.Parse(ViewBag.Size.ToString()) + 1;
+	var dioptr = double.Parse(ViewBag.Dioptr.ToString()) - 0.5;
+	var imageUrl = string.Format(@"\Content\Images\Define\{0}.jpg", ViewBag.Size.ToString());
 }
  
 <h2 class="text-center">Визначення зору</h2>
@@ -11,8 +12,13 @@
 </div>
 <hr class="top">
 <div class="text-center">
-    @Html.ActionLink("Бачу чітко", "Define", new { size = newSize }, new { @class = "btn btn-default" })
-    @Html.ActionLink("Бачу погано", "", null, new { id = "show-dialog-button", @class = "btn btn-default" })
+    @Html.ActionLink("Бачу чітко", "Define", new { size = newSize, dioptr }, new { @class = "btn btn-primary" })
+	 @if (double.Parse(ViewBag.Dioptr.ToString()) == 4) {
+		@Html.ActionLink("Бачу погано", "BadSight", null, new { @class = "btn btn-primary" })
+	 } else {
+		 @Html.ActionLink("Бачу погано", "", null, new { id = "show-dialog-button", @class = "btn btn-primary" })
+	 }
+    
 </div>
 <div id="recomendationModal" class="modal fade">
     <div class="modal-dialog">
@@ -20,23 +26,23 @@
             <div class="modal-body">
                 <p>Рекомендації</p>
                 <div>text</div>
-                <div>dioptr: @ViewBag.Size</div>
+                <div>dioptr: @ViewBag.Dioptr</div>
             </div>
-            <div class="modal-footer">
-                @Html.ActionLink("Обрати окуляри", "GlassesList", null, new { id = "show-dialog-button", @class = "btn btn-primary" })
-            </div>
+	        <div class="modal-footer">
+		        @Html.ActionLink("Обрати окуляри", "GlassesList", null, new { id = "show-dialog-button", @class = "btn btn-primary" })
+	        </div>
         </div>
     </div>
 </div>
 
 @section scripts {
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#show-dialog-button').click(function (event) {
-                $('#recomendationModal').modal('show');
-                event.preventDefault()
-            });
-            }
-        );
+	    $(document).ready(function() {
+			    $('#show-dialog-button').click(function(event) {
+				    $('#recomendationModal').modal('show');
+				    event.preventDefault();
+			    });
+		    }
+	    );
     </script>
 }

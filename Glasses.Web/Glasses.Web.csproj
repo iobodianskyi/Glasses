@@ -247,6 +247,7 @@
     <Content Include="Views\Home\GlassesList.cshtml" />
     <Content Include="Views\Home\Instractions.cshtml" />
     <Content Include="Views\Home\GoodEyes.cshtml" />
+    <Content Include="Views\Home\BadSight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
