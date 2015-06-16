@@ -12,7 +12,7 @@ namespace Glasses.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "aSDFSDsd";
+            ViewBag.Message = "Студенти НУ \"Львівська політехніка\"";
 
             return View();
         }
@@ -90,7 +90,7 @@ namespace Glasses.Web.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "+380933988644 Андрій";
 
             return View();
         }
